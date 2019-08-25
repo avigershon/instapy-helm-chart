@@ -37,9 +37,6 @@ spec:
           - name: run-configmap
             mountPath: "/code/quickstart.py"
             subPath: "quickstart.py"
-          - name: state-configmap
-            mountPath: "/root/InstaPy/logs/jambo_hakuna_matata/state.json"
-            subPath: "state.json"
         resources: {}
       volumes:
         {{- range .Values.secrets }}
@@ -50,8 +47,5 @@ spec:
         - name: run-configmap
           configMap:
             name: {{ template "instapy.fullname" . }}-run-configmap
-        - name: state-configmap
-          configMap:
-            name: {{ template "instapy.fullname" . }}-state-configmap
       restartPolicy: Always
 status: {}
