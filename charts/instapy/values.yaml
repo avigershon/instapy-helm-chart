@@ -7,8 +7,8 @@ updateStrategy:
   type: "RollingUpdate"
 
 image:
-  repository: gcr.io/datagram-92257/instapy
-  tag: "7399e32"
+  repository: funkypenguin/instapy
+  tag: "latest"
   pullPolicy: Always
 
 env:
