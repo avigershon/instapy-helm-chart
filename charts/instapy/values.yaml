@@ -15,7 +15,7 @@ env:
   PYTHONUNBUFFERED: 0
   USERNAME: "jambo_hakuna_matata"
   PASSWORD: "lioran020"
-  SELENIUM_URL: "http://35.222.43.26:4444/wd/hub"
+  SELENIUM_URL: "http://v1-selenium-hub:4444/wd/hub"
   LIKE_BY_TAGS: "vacation,vegan,gooslife,holiday,veganfood,tasty,iphonephotography,love,instagood,me,cute,tbt,photooftheday,instamood,iphonesia,
                 tweegram,picoftheday,igers,girl,beautiful,instadaily,summer,instagramhub,iphoneonly,
                 follow,igdaily,bestoftheday,happy,picstitch,tagblender,jj,sky,nofilter,fashion,
