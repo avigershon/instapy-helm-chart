@@ -107,9 +107,13 @@ with smart_run(session):
 
     """ Interact with the chosen targets...
     """
-    session.follow_user_followers(random_targets,
-                                  amount=random.randint(30, 60),
-                                  randomize=True, sleep_delay=600)
+    try:
+        session.follow_user_followers(random_targets,
+                                      amount=random.randint(30, 60),
+                                      randomize=True, sleep_delay=600,
+                                      interact=True)
+    except:
+        print("An exception occurred in session.follow_user_followers()")
 
     # UNFOLLOW activity
     """ Unfollow nonfollowers after one day...
