@@ -15,7 +15,7 @@ spec:
       containers:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: {{ template "instapy.name" . }}
-        command: ["./wait-for", "v1-selenium-hub:4444", "--", "python", "quickstart.py"]
+        command: ["python", "quickstart.py"]
         env:
           {{- range $key, $value := .Values.env }}
           - name: {{ $key | upper | replace "." "_" }}
