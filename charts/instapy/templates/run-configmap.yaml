@@ -8,5 +8,5 @@ metadata:
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
 data:
-  docker_quickstart.py: |-
+  quickstart.py: |-
 {{ include (print $.Template.BasePath "/_run.txt") . | indent 4 }}
