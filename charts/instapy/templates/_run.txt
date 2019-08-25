@@ -109,8 +109,7 @@ with smart_run(session):
     """
     session.follow_user_followers(random_targets,
                                   amount=random.randint(30, 60),
-                                  randomize=True, sleep_delay=600,
-                                  interact=True)
+                                  randomize=True, sleep_delay=600)
 
     # UNFOLLOW activity
     """ Unfollow nonfollowers after one day...
