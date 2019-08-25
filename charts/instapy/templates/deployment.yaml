@@ -15,7 +15,7 @@ spec:
       containers:
       - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         name: {{ template "instapy.name" . }}
-        command: ["./wait-for", "v1-selenium-hub:4444", "--", "python", "jobs/quickstart.py"]
+        command: ["./wait-for", "v1-selenium-hub:4444", "--", "python", "/jobs/quickstart.py"]
         env:
           {{- range $key, $value := .Values.env }}
           - name: {{ $key | upper | replace "." "_" }}
@@ -35,7 +35,7 @@ spec:
           {{- end }}
         {{- end }}
           - name: run-configmap
-            mountPath: "jobs/quickstart.py"
+            mountPath: "/jobs/quickstart.py"
             subPath: "quickstart.py"
         resources: {}
       volumes:
