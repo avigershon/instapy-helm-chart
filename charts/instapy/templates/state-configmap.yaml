@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "instapy.fullname" . }}-state-configmap
+  labels:
+    app: {{ template "instapy.name" . }}
+    chart: {{ template "instapy.chart" . }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+data:
+  state.json: |-
+      {"challenge":{"security_code":"087463"}}
