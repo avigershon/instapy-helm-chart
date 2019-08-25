@@ -8,7 +8,7 @@ updateStrategy:
 
 image:
   repository: gcr.io/datagram-92257/instapy
-  tag: "d09226cb690413cd022dd63105e95ebab5a99006"
+  tag: "7399e32"
   pullPolicy: Always
 
 env:
