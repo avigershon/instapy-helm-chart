@@ -112,23 +112,32 @@ with smart_run(session):
                                       amount=random.randint(30, 60),
                                       randomize=True, sleep_delay=600,
                                       interact=True)
+        print("session.follow_user_followers finished")
     except:
         print("An exception occurred in session.follow_user_followers()")
 
     # UNFOLLOW activity
     """ Unfollow nonfollowers after one day...
     """
-    session.unfollow_users(amount=random.randint(75, 100),
-                           InstapyFollowed=(True, "nonfollowers"),
-                           style="FIFO",
-                           unfollow_after=24 * 60 * 60, sleep_delay=600)
+    try:
+        session.unfollow_users(amount=random.randint(75, 100),
+                               InstapyFollowed=(True, "nonfollowers"),
+                               style="FIFO",
+                               unfollow_after=24 * 60 * 60, sleep_delay=600)
+        print("session.unfollow_users 1 finished")
+    except:
+        print("An exception occurred in session.unfollow_users() 1")
 
     """ Unfollow all users followed by InstaPy after one week to keep the 
     following-level clean...
     """
-    session.unfollow_users(amount=random.randint(75, 100),
-                           InstapyFollowed=(True, "all"), style="FIFO",
-                           unfollow_after=168 * 60 * 60, sleep_delay=600)
+    try:
+        session.unfollow_users(amount=random.randint(75, 100),
+                               InstapyFollowed=(True, "all"), style="FIFO",
+                               unfollow_after=168 * 60 * 60, sleep_delay=600)
+        print("session.unfollow_users 2 finished")
+    except:
+        print("An exception occurred in session.unfollow_users() 2")
 
     """ Joining Engagement Pods...
     """
